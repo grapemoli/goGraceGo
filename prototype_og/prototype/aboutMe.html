@@ -1,0 +1,131 @@
+
+<!doctype html>
+
+<!--
+    Filename: aboutMe.html
+    Written by: Grace Nguyen
+    Purpose: about me page will have my picture as well as relevant information
+    Date: 11/16/2022
+    Last Modified By: Grace Nguyen (GN)
+    Modification History:
+  	16 November 2022: create the file + linked it -GN
+    17 November 2022: added github link, created table -GN
+-->
+
+
+<html lang="en">
+    <head>
+
+      <title>Go Grace Go!</title>
+
+      <meta charset="utf-8">
+      <!-- js/jquery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+      <!-- css -->
+      <link href="../theme/jquery-ui.css" rel="stylesheet"> <!-- theme colors -->
+      <link href="../css/finalProject.css" rel="stylesheet">
+
+      <!-- favicon (i made it, so no copyright) -->
+      <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#86b2d1">
+      <meta name="msapplication-TileColor" content="#603cba">
+      <meta name="theme-color" content="#ffffff">
+    </head>
+
+    <body>
+      <h1 id="homeTitle" class=title>Go Grace Go!</h1> <hr>
+
+      <!-- favicon logo -->
+      <div id="logo">
+	       <img alt="a purple fluffy ball" width="175" height="175" src="../img/faviconNoBackground.png">
+       </div>
+
+      <!--
+      navigation menu
+      source: https://www.w3schools.com/howto/howto_js_sidenav.asp
+      changes: span -> button, event handlers moved to a seperate js file, added ID names
+      -->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" id="menuClose">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="aboutMe.html">About Me</a>
+        <a href="contact.html">Contact Me</a>
+        <a href="login.html">Misc.</a>
+      </div>
+
+      <button type="button" id="menuOpen">&#9776;</button> <!-- in CSS: defocus button-->
+
+      <!-- nice textbox of information about this website -->
+      <br><br>
+      <div class="profile">
+        <table class="profile" id="table">
+          <colgroup>
+            <col span="1" id="aboutMeCol1">
+            <col span="1" id="aboutMeCol2">
+            <col span="1" id="aboutMeCol3">
+          </colgroup>
+          <tr>
+            <td>
+              <img id="profileImg" src="../img/pfp1.jpg" alt="an asian girl smiling for the camera">
+            </td>
+            <td>
+              <div id="profileInfo">
+                <!-- headers -->
+                <h2 class="aboutMeCenter">Grace Nguyen</h2>
+                <p class="aboutMeCenter"><i>Junior in Computer Science at Indiana University-Purdue University of Indianapolis</i></p>
+                <hr>
+
+                <!-- summary paragraph -->
+                <p class="aboutMeParagraph">
+                  <br>
+                  Being born on April 1, 2003, I hear the same joke every year: "Haha, your life is a joke!"
+                  <br><br>
+                  That's not particularly false... I used to be someone who vehemently refused to take programming courses because programming was "something only losers who don't ever shower do."
+                  Look at me now, a Computer Science major. That's pretty funny.
+
+                  <br><br>
+                  My goal is to become a Software Engineer who's not bound by programming languages. This goal is a large part of why you will see various languages in the Projects section!
+
+                  <br><br>
+                  Outside of programming, you'll find me judging at a Speech & Debate meet on Saturdays or doing my mother's groceries on Sunday. If you ask me about music, prepare to have a three hour long conversation at the minimum.
+                </p>
+              </div>
+            </td>
+
+            <!-- relevant links -->
+            <td>
+
+              <table id="aboutMeLinks">
+                <tr>
+                  <td>
+                    <!-- github logo is permitted as per their site: https://github.com/logos -->
+                    <img id="githubIcon" class="logoImg" src="../img/GitHub-Mark-64px.png" alt="github logo acting as a button">
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <!-- link to this page -->
+                    <br><br><br>
+                    <img id="gggIcon" class="logoImg" src="../img/safari-pinned-tab.svg"  alt="a fluffy purple ball">
+                  </td>
+                </tr>
+
+              </table>
+
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- load the javascript! -->
+      <script src="../theme/jquery-ui.js"></script> <!-- jQuery UI Library Functionality -->
+      <script src="../js/finalProject.js"></script> <!-- script js from jQuery UI & my additional js -->
+    </body>
+
+</html>

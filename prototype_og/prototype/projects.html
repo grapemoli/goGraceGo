@@ -1,0 +1,125 @@
+
+<!doctype html>
+
+<!--
+    Filename: projects.html
+    Written by: Grace Nguyen
+    Purpose: this page will contain by personal projects
+    Date: 11/16/2022
+    Last Modified By: Grace Nguyen (GN)
+    Modification History:
+  	16 November 2022: create the file -GN
+    17 November 2022: create the filter grid and output field -GN
+-->
+
+
+<html lang="en">
+    <head>
+
+      <title>Go Grace Go!</title>
+
+      <meta charset="utf-8">
+      <!-- js/jquery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+      <!-- css -->
+      <link href="../theme/jquery-ui.css" rel="stylesheet"> <!-- theme colors -->
+      <link href="../css/finalProject.css" rel="stylesheet">
+
+      <!-- favicon (i made it, so no copyright) -->
+      <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#86b2d1">
+      <meta name="msapplication-TileColor" content="#603cba">
+      <meta name="theme-color" content="#ffffff">
+    </head>
+
+    <body>
+      <h1 id="homeTitle" class=title>Go Grace Go!</h1> <hr>
+
+      <!-- favicon logo -->
+      <div id="logo">
+	       <img alt="a purple fluffy ball" width="175" height="175" src="../img/faviconNoBackground.png">
+       </div>
+
+      <!--
+      navigation menu
+      source: https://www.w3schools.com/howto/howto_js_sidenav.asp
+      changes: span -> button, event handlers moved to a seperate js file, added ID names
+      -->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" id="menuClose">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="aboutMe.html">About Me</a>
+        <a href="contact.html">Contact Me</a>
+        <a href="login.html">Misc.</a>
+      </div>
+
+      <button type="button" id="menuOpen">&#9776;</button> <!-- in CSS: defocus button-->
+
+      <h2>Projects</h2>
+
+      <!-- controlgroup for user to browse through all projects -->
+      <fieldset>
+      	<legend>Filter Options</legend>
+      	<div id="controlgroup">
+
+          <!-- filter by year -->
+          <h3>Year Selection</h3>
+      		<select id="yearSelection">
+      			<option value="0" selected>None Selected</option>
+            <option value="2020">2020</option>
+      			<option value="2021">2021</option>
+      			<option value="2022">2022</option>
+      			<option value="2023">2023</option>
+      		</select>
+
+          <!-- sort by programming languages -->
+          <br><br>
+          <h3>Programming Language(s) Selection</h3>
+          <div class="plCheckbox">
+            <label for="c">C</label>
+        		<input value="C" type="checkbox" name="pl" id="c">
+            <label for="cpp">C++</label>
+        		<input value="C++" type="checkbox" name="pl" id="cpp">
+            <label for="java">Java</label>
+        		<input value="Java" type="checkbox" name="pl" id="java">
+            <label for="js">JavaScript</label>
+        		<input value="JavaScript" type="checkbox" name="pl" id="js">
+            <label for="perl">Perl</label>
+        		<input value="Perl" type="checkbox" name="pl" id="perl">
+            <label for="python">Python</label>
+        		<input value="Python" type="checkbox" name="pl" id="python">
+            <label for="ruby">Ruby</label>
+        		<input value="Ruby" type="checkbox" name="pl" id="ruby">
+            <label for="swift">Swift</label>
+        		<input value="Swift" type="checkbox" name="pl" id="swift">
+            <label for="vb">VisualBasic</label>
+        		<input value="Visual Basic" type="checkbox" name="pl" id="vb">
+            <label for="other">Other</label>
+        		<input value="Other" type="checkbox" name="pl" id="other">
+          </div>
+
+          <!-- submit the filter form button -->
+          <br><br>
+          <div class="filterBtns">
+            <button id="filterSubmitBtn">Filter</button>
+            <button id="filterResetBtn">Reset</button>
+          </div>
+      	</div>
+      </fieldset>
+
+      <p id="filterOutput">Output Field goes here: </p>
+
+
+
+
+      <!-- load the javascript! -->
+      <script src="../theme/jquery-ui.js"></script> <!-- jQuery UI Library Functionality -->
+      <script src="../js/finalProject.js"></script> <!-- script js from jQuery UI & my additional js -->
+    </body>
+
+</html>

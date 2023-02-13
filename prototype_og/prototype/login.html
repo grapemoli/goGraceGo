@@ -1,0 +1,114 @@
+
+<!doctype html>
+
+<!--
+    Filename: login.html
+    Written by: Grace Nguyen
+    Purpose: this page allows someone to login to my website, so that they can add personal projects
+    Date: 11/16/2022
+    Last Modified By: Grace Nguyen (GN)
+    Modification History:
+  	16 November 2022: create the file -GN
+    17 November 2022: add form -GN
+-->
+
+
+<html lang="en">
+    <head>
+
+      <title>Go Grace Go!</title>
+
+      <meta charset="utf-8">
+      <!-- js/jquery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+      <!-- css -->
+      <link href="../theme/jquery-ui.css" rel="stylesheet"> <!-- theme colors -->
+      <link href="../css/finalProject.css" rel="stylesheet">
+
+      <!-- favicon (i made it, so no copyright) -->
+      <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#86b2d1">
+      <meta name="msapplication-TileColor" content="#603cba">
+      <meta name="theme-color" content="#ffffff">
+    </head>
+
+    <body>
+      <h1 id="homeTitle" class=title>Go Grace Go!</h1> <hr>
+
+      <!-- favicon logo -->
+      <div id="logo">
+	       <img alt="a purple fluffy ball" width="175" height="175" src="../img/faviconNoBackground.png">
+       </div>
+
+      <!--
+      navigation menu
+      source: https://www.w3schools.com/howto/howto_js_sidenav.asp
+      changes: span -> button, event handlers moved to a seperate js file, added ID names
+      -->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" id="menuClose">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="aboutMe.html">About Me</a>
+        <a href="contact.html">Contact Me</a>
+        <a href="login.html">Misc.</a>
+      </div>
+
+      <button type="button" id="menuOpen">&#9776;</button> <!-- in CSS: defocus button-->
+
+      <!-- form table -->
+      <h2>Login</h2>
+      <div class="loginForm">
+        <form class="loginForm" action="loginB.html" method="post">
+          <table>
+            <colgroup>
+              <col span="1" id="loginCol1">
+              <col span="1" id="loginCol2">
+            </colgroup>
+
+
+            <!-- username input -->
+            <tr>
+              <td>
+                <p>
+                  <b>Username </b>
+                </p>
+              </td>
+              <td>
+                <input type="text" name="username" id="username" class="formInput" required>
+              </td>
+            </tr>
+
+            <!-- password input -->
+            <tr>
+              <td>
+                <p>
+                  <b>Password </b>
+                </p>
+              </td>
+              <td>
+                <input type="text" name="password" id="password" class="formInput" required>
+              </td>
+            </tr>
+
+            <!-- submit -->
+            <tr>
+              <td></td>
+              <td>
+                <button id="formSubmitBtn" type="submit">Submit</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+
+      <!-- load the javascript! -->
+      <script src="../theme/jquery-ui.js"></script> <!-- jQuery UI Library Functionality -->
+      <script src="../js/finalProject.js"></script> <!-- script js from jQuery UI & my additional js -->
+    </body>
+
+</html>

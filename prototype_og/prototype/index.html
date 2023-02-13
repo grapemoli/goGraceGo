@@ -1,0 +1,87 @@
+
+<!doctype html>
+
+<!--
+    Filename: index.html
+    Written by: Grace Nguyen
+    Purpose: this will be the "dummy" page of my final result
+    Date: 11/14/2022
+    Last Modified By: Grace Nguyen (GN)
+    Modification History:
+  	15 November 2022: create the file -GN
+    16 November 2022: add hs, navigation menu (w3schools) -GN
+    16 November 2022: made and added favicon + logo;  added effect -GN
+    17 November 2022: created and linked the other pages -GN
+    17 November 2022: linked powerpoint -GN
+-->
+
+
+<html lang="en">
+    <head>
+
+      <title>Go Grace Go!</title>
+
+      <meta charset="utf-8">
+      <!-- js/jquery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+      <!-- css -->
+      <link href="../theme/jquery-ui.css" rel="stylesheet"> <!-- theme colors -->
+      <link href="../css/finalProject.css" rel="stylesheet">
+
+      <!-- favicon (i made it, so no copyright) -->
+      <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#86b2d1">
+      <meta name="msapplication-TileColor" content="#603cba">
+      <meta name="theme-color" content="#ffffff">
+    </head>
+
+    <body>
+      <h1 id="homeTitle" class=title>Go Grace Go!</h1> <hr>
+
+      <!-- favicon logo -->
+      <div id="logo">
+	       <img alt="a purple fluffy ball" width="175" height="175" src="../img/faviconNoBackground.png">
+       </div>
+
+      <!--
+      navigation menu
+      source: https://www.w3schools.com/howto/howto_js_sidenav.asp
+      changes: span -> button, event handlers moved to a seperate js file, added ID names
+      -->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" id="menuClose">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="aboutMe.html">About Me</a>
+        <a href="contact.html">Contact Me</a>
+        <a href="login.html">Misc.</a>
+      </div>
+
+      <button type="button" id="menuOpen">&#9776;</button> <!-- in CSS: defocus button-->
+
+      <!-- nice textbox of information about this website -->
+      <h2>Home</h2>
+      <div class="infoText">
+        <p>
+          <strong>Hi!</strong> Welcome to my website.
+
+          <br><br>
+          <strong>Feeling bored?</strong> <i>Click the icon.</i>
+          <br><br><br>
+          Or you can check out this powerpoint designed and animated by me:
+        </p>
+        <iframe src="https://indiana-my.sharepoint.com/personal/gtnguyen_iu_edu/_layouts/15/Doc.aspx?sourcedoc={6e7a203e-b166-4606-bacb-a2890f4d88f0}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="476px" height="288px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+      </div>
+
+
+
+      <!-- load the javascript! -->
+      <script src="../theme/jquery-ui.js"></script> <!-- jQuery UI Library Functionality -->
+      <script src="../js/finalProject.js"></script> <!-- script js from jQuery UI & my additional js -->
+    </body>
+
+</html>

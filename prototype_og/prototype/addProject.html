@@ -1,0 +1,171 @@
+
+<!doctype html>
+
+<!--
+    Filename: index.html
+    Written by: Grace Nguyen
+    Purpose: this form asks users for information to add a project
+    Date: 11/17/2022
+    Last Modified By: Grace Nguyen (GN)
+    Modification History:
+  	17 November 2022: create the file -GN
+-->
+
+
+<html lang="en">
+    <head>
+
+      <title>Go Grace Go!</title>
+
+      <meta charset="utf-8">
+      <!-- js/jquery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+      <!-- css -->
+      <link href="../theme/jquery-ui.css" rel="stylesheet"> <!-- theme colors -->
+      <link href="../css/finalProject.css" rel="stylesheet">
+
+      <!-- favicon (i made it, so no copyright) -->
+      <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#86b2d1">
+      <meta name="msapplication-TileColor" content="#603cba">
+      <meta name="theme-color" content="#ffffff">
+    </head>
+
+    <body>
+      <h1 id="homeTitle" class=title>Go Grace Go!</h1> <hr>
+
+      <!-- favicon logo -->
+      <div id="logo">
+	       <img alt="a purple fluffy ball" width="175" height="175" src="../img/faviconNoBackground.png">
+       </div>
+
+      <!--
+      navigation menu
+      source: https://www.w3schools.com/howto/howto_js_sidenav.asp
+      changes: span -> button, event handlers moved to a seperate js file, added ID names
+      -->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" id="menuClose">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="aboutMe.html">About Me</a>
+        <a href="contact.html">Contact Me</a>
+        <a href="login.html">Misc.</a>
+      </div>
+
+      <button type="button" id="menuOpen">&#9776;</button> <!-- in CSS: defocus button-->
+
+      <!-- nice textbox of information about this website -->
+      <h2>Add a Project</h2>
+
+      <!-- grid for project information -->
+      <div class="addProjectForm">
+        <form class="addProjectForm" action="addProjectB.html" method="post">
+          <table id="addProjectForm">
+            <colgroup>
+              <col span="1" id="addProjectCol1">
+              <col span="1" id="addProjectCol2">
+            </colgroup>
+
+            <!-- project name input -->
+            <tr>
+              <td>
+                <p>
+                  <b>Project Name </b>(required)
+                </p>
+              </td>
+              <td>
+                <input class="addProjectInput" type="text" id="addProjectName" required autofocus>
+              </td>
+            </tr>
+
+            <!-- programming language(s) input -->
+            <tr>
+              <td>
+                <p>
+                  <b>Main Programming Language </b> (required)
+                </p>
+              </td>
+              <td>
+                <input id="autocomplete" title="type &quot;a&quot;" class="addProjectInput">
+              </td>
+            </tr>
+
+            <!-- link if applicable -->
+            <tr>
+              <td>
+                <p>
+                  <b>Link</b>
+                </p>
+              </td>
+              <td>
+                <input type="url" class="addProjectInput" id="addProjectLink">
+              </td>
+            </tr>
+
+            <!-- if applicable, upload file(s) -->
+            <tr>
+              <td>
+                <p>
+                  <b>
+                    File Upload
+                  </b>
+                </p>
+              </td>
+              <td>
+                <input type="file" class="addProjectInput" id="addProjectFile" multiple="">
+              </td>
+            </tr>
+
+            <!-- date last updated -->
+            <tr>
+              <td>
+                <p>
+                  <b>Last Updated </b>
+                </p>
+              </td>
+              <td>
+                <div id="datepicker"></div>
+              </td>
+            </tr>
+
+            <!-- Project Description -->
+            <tr>
+              <td>
+                <p>
+                  <br><br>
+                  <b>Description </b> (required)
+                </p>
+              </td>
+              <td>
+                <br><br>
+                <textarea  class="addProjectInput" rows="8" cols="80" id="addProjectDescription" required></textarea>
+              </td>
+            </tr>
+
+            <!-- submit and reset button -->
+            <tr>
+              <td>
+                <input type="reset" id="resetBtn">
+              </td>
+              <td>
+                <button id="addProjectSubmitBtn" type="submit">Submit</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+
+
+
+
+      <!-- load the javascript! -->
+      <script src="../theme/jquery-ui.js"></script> <!-- jQuery UI Library Functionality -->
+      <script src="../js/finalProject.js"></script> <!-- script js from jQuery UI & my additional js -->
+    </body>
+
+</html>

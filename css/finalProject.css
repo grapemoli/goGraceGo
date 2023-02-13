@@ -1,0 +1,424 @@
+@charset "utf-8";
+/* CSS Document */
+/**************************************
+ Filename: finalProject.css
+ Author: Grace Nguyen
+ Create Date: 15 November 2022
+ Purpose: Provide theme for final project and prototype spec
+ Modification History:
+ 15 November 2022 - copy-paste css from JQuery UI preset -GN
+ 16 November 2022 - navigation menu per w3schools -GN
+ 17 Novmeber 2022 - created and linked the other pages -GN
+ 05 December 2022 - passed testing -GN
+**************************************/
+#homeTitle {
+  font-family: "Trebuchet MS", sans-serif;
+  margin: 5%;
+  color: #696969;
+  text-align: center;
+}
+
+body{
+  font-family: "Trebuchet MS", sans-serif;
+  margin: 50px;
+}
+.demoHeaders {
+  margin-top: 2em;
+}
+#dialog-link {
+  padding: .4em 1em .4em 20px;
+  text-decoration: none;
+  position: relative;
+}
+#dialog-link span.ui-icon {
+  margin: 0 5px 0 0;
+  position: absolute;
+  left: .2em;
+  top: 50%;
+  margin-top: -8px;
+}
+#icons {
+  margin: 0;
+  padding: 0;
+}
+#icons li {
+  margin: 2px;
+  position: relative;
+  padding: 4px 0;
+  cursor: pointer;
+  float: left;
+  list-style: none;
+}
+#icons span.ui-icon {
+  float: left;
+  margin: 0 4px;
+}
+.fakewindowcontain .ui-widget-overlay {
+  position: absolute;
+}
+select {
+  width: 200px;
+}
+
+/*
+  Navigation Menu
+  soruce: https://www.w3schools.com/howto/howto_js_sidenav.asp
+  changes to source: padding -> percentages, colors, remove button color and focus
+*/
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fadc7a; /* color from jQuery UI */
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 5%;
+}
+
+.sidenav a {
+  padding: 10%;
+  text-decoration: none;
+  font-size: 25px;
+  color: #696969;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#menuOpen {
+  left: 0;
+  font-size: 30px;
+  background-color:rgba(255, 255, 255, 0);
+  background:rgba(255, 255, 255, 0);
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* favicon and logo */
+#logo {
+	position: absolute;
+	top:10px;
+	left:0;
+}
+
+/* textbox */
+.infoText {
+  color: #383838;
+  font-family: "Trebuchet MS", sans-serif;
+  font: 100%;
+}
+
+/* about me: table formatting */
+#table {
+    width: 100%;
+    margin: auto;
+    font-family: "Trebuchet MS", sans-serif;
+    border: 3px solid #d19405; /* color from jQuery UI */
+}
+
+#aboutMeLinks {
+  width: 100%;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.logoImg {
+  margin-right: 10%;
+  cursor: pointer;
+  float: right;
+}
+
+.aboutMeCenter {
+  text-align: center;
+}
+
+#gggIcon {
+  width: 64px;
+  height: 64px;
+}
+
+#profileImg {
+  width: 80%;
+  height: 100%;
+}
+
+#profileInfo {
+  text-align: left;
+  font-family: "Trebuchet MS", sans-serif;
+  width: 100%;
+  color: #333333;
+}
+
+.logoImg {
+  cursor: pointer;
+}
+
+
+#aboutMeCol1 {
+  width: 30%
+}
+
+#aboutMeCol2 {
+  width: 60%;
+}
+
+#aboutMeCol3 {
+  width: 10%;
+}
+
+/* Contact Me: reset input button formatting to match jQuery theme */
+#resetBtn #projectSubmitBtn {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  color: #4c3000;
+  text-decoration: none;
+  border: 1px solid #d19405;
+  background: #fece2f url("../theme/images/ui-bg_gloss-wave_60_fece2f_500x100.png") 50% 50% repeat-x;
+  font-weight: bold;
+  font-family: Segoe UI,Arial,sans-serif;
+  font-size: 1.1em;
+  padding: .4em 1em;
+  display: inline-block;
+  position: relative;
+  line-height: normal;
+  margin-right: .1em;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: visible;
+}
+
+.formInput {
+  border: 1px solid #d19405;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  background: #feeebd 50% top repeat-x;
+  color: #383838;
+  font-size: 1.1em;
+}
+
+/* contact me table formatting */
+#userInput {
+  height: calc(2.5em + 4.75rem + 2px);
+  width: 70%;
+}
+
+#contactCol1 {
+  width: 30%;
+  text-align: center;
+}
+
+#contactCol2 {
+  width: 70%;
+  text-align: left;
+}
+
+.contactForm {
+  width: 100%;
+  margin: auto;
+}
+.formInput {
+  width: 70%;
+}
+
+#contactSubmitBtn {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  color: #4c3000;
+  text-decoration: none;
+  border: 1px solid #d19405;
+  background: #fece2f url("../theme/images/ui-bg_gloss-wave_60_fece2f_500x100.png") 50% 50% repeat-x;
+  font-weight: bold;
+  font-family: Segoe UI,Arial,sans-serif;
+  font-size: 1.1em;
+  padding: .4em 1em;
+  display: inline-block;
+  position: relative;
+  line-height: normal;
+  margin-right: .1em;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: visible;
+}
+
+
+/* Misc. Login form css */
+#loginSubmitBtn {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  color: #4c3000;
+  text-decoration: none;
+  border: 1px solid #d19405;
+  background: #fece2f url("../theme/images/ui-bg_gloss-wave_60_fece2f_500x100.png") 50% 50% repeat-x;
+  font-weight: bold;
+  font-family: Segoe UI,Arial,sans-serif;
+  font-size: 1.1em;
+  padding: .4em 1em;
+  display: inline-block;
+  position: relative;
+  line-height: normal;
+  margin-right: .1em;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: visible;
+}
+
+#loginCol1 {
+  width: 30%;
+  text-align: center;
+}
+
+#loginCol2 {
+  width: 70%;
+  text-align: left;
+}
+
+.loginForm {
+  width: 100%;
+  margin: auto;
+}
+
+/* Project Filter selection form */
+.filterBtns {
+  display:inline-block;
+  width: 100%;
+}
+
+#filterSubmitBtn {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  color: #4c3000;
+  text-decoration: none;
+  border: 1px solid #d19405;
+  background: #fece2f url("../theme/images/ui-bg_gloss-wave_60_fece2f_500x100.png") 50% 50% repeat-x;
+  font-weight: bold;
+  font-family: Segoe UI,Arial,sans-serif;
+  font-size: 1.1em;
+  padding: .4em 1em;
+  display: inline-block;
+  position: relative;
+  line-height: normal;
+  margin-right: 60%;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: visible;
+}
+
+#filterResetBtn {
+  margin-left: auto;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+
+/* CSS for the buttons on the Admin access only pages! */
+#adminCol1 {
+  width: 10%;
+}
+
+#adminCol2 {
+  width: 60%;
+}
+
+.adminTableLabel {
+  color: #696969;
+}
+
+/* add a project / add project css */
+#addProjectSubmitBtn {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  color: #4c3000;
+  text-decoration: none;
+  border: 1px solid #d19405;
+  background: #fece2f url("../theme/images/ui-bg_gloss-wave_60_fece2f_500x100.png") 50% 50% repeat-x;
+  font-weight: bold;
+  font-family: Segoe UI,Arial,sans-serif;
+  font-size: 1.1em;
+  padding: .4em 1em;
+  display: inline-block;
+  position: relative;
+  line-height: normal;
+  margin-right: .1em;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: visible;
+}
+
+#addProjectCol1 {
+  width: 30%;
+}
+
+#addProjectCol2 {
+  width: 70%;
+}
+
+.addProjectInput {
+  border: 1px solid #d19405;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  background: #feeebd 50% top repeat-x;
+  color: #383838;
+  font-size: 1.1em;
+  width: 70%;
+}
